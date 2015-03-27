@@ -1,0 +1,58 @@
+// VARIABLES
+$text-font-family: $G-font-family;
+$text-color: #5a5a5a;
+$text-font-size: u(1.8rem);
+$text-font-weight: 300;
+$text-max-width: u(90rem);
+
+// STYLES
+
+.text{
+  padding: u(2rem);
+  overflow: hidden;
+
+  h2{
+    max-width: $text-max-width;
+    margin: u(1rem) auto;
+    color: $text-color;
+    text-align: center;
+    font:{
+      family: norwester;
+      size: u(4rem);
+    }
+  }
+
+  p{
+    color: $text-color;
+    max-width: $text-max-width;
+    margin: u(1rem) auto;
+    clear: both;
+    font:{
+      size: $text-font-size;
+      family: $text-font-family;
+      weight: $text-font-weight;
+    }
+    text-align: justify;
+    line-height: 1.5em;
+    b, strong{
+      font-weight: $text-font-weight + 100;
+    }
+    i, em{
+      font:{
+        weight: $text-font-weight;
+        style: italic;
+      }
+    }
+    a{
+      @extend %anchor;
+    }
+  }
+}
+
+@media (min-width: 480px){
+  .text{
+    h2{
+      text-align: left;
+    }
+  }
+}

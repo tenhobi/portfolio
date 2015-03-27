@@ -1,0 +1,48 @@
+//
+// GLOBAL VARIABLES
+//
+
+$G-pixelBase: 10;
+$G-body-bg: rgb(242, 242, 242);
+$G-main-color: #ff3554;
+$G-font-family: "Roboto Slab";
+
+//
+// CSS RESET
+//
+
+html{
+  font-size: 62.5%;
+}
+
+body, div, span,
+h1, h2, h3, h4, h5, h6, q, blockquote,
+a, p, u, em, i, b, strong, img,
+ol, ul, li,
+form, label, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, footer, header, nav, section
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+section, main, article, aside, header, footer, nav, figure, figcaption{
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  line-height: 1;
+}

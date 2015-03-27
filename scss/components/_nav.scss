@@ -1,0 +1,86 @@
+// VARIABLES
+
+$nav-bg: #ffffff;
+$nav-height: 4rem;
+$nav-font-size: 1.7rem;
+$nav-a-color: #7a7a7a;
+$nav-a-padding: 2rem;
+$nav-a-font-family: $G-font-family;
+$nav-a-font-weight: 300;
+
+// STYLES
+
+.galerie img {
+  width: 50%;
+  float: left;
+
+  @media screen and (max-width: 700px) {
+    &{
+      width: 100%;
+      float: none;
+    }
+  }
+}
+
+nav{
+  background: $nav-bg;
+  width: 100%;
+  font-size: u($nav-font-size);
+  position: relative;
+  overflow: hidden;
+
+  a{
+    text-decoration: none;
+    color: $nav-a-color;
+    text-align: center;
+    font:{
+      family: $G-font-family;
+      weight: $nav-a-font-weight;
+    };
+    line-height: u($nav-height);
+    display: block;
+    &:hover{
+      color: darken($nav-a-color, 40%);
+    }
+  }
+}
+
+// modifies style on bigger screen
+@media (min-width: 480px){
+
+  nav{
+    height: u($nav-height);
+
+    ul{
+      float: left;
+      position: relative;
+      left: 50%;
+      li{
+        float: left;
+        position: relative;
+        right: 50%;
+      }
+    }
+
+    a{
+      padding: u(0 $nav-a-padding);
+      &:hover:before{
+        @include vendor-prefix(transform, scaleX(1));
+      }
+      &:before{
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        top: 0px;
+        width: 100%;
+        height: u(0.2rem);
+        margin-left: - u($nav-a-padding);
+        z-index: 10;
+        background-color: $G-main-color;
+        @include vendor-prefix(transform, scaleX(0));
+        @include vendor-prefix(transition, all 0.3s ease-in-out 0s);
+      }
+    }
+  }
+
+}

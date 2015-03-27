@@ -1,0 +1,21 @@
+//
+// Local fonts
+//
+// --- have to link like from CSS folder
+
+// Norwester
+@font-face {
+  font-family: norwester;
+  src:  url("../fonts/norwester/norwester-v1.2/norwester.otf");
+  src:  url('../fonts/norwester/norwester-v1.2/webfonts/norwester.woff') format('woff'),
+        url('../fonts/norwester/norwester-v1.2/webfonts/norwester.eot') format('eot'),
+        url('../fonts/norwester/norwester-v1.2/webfonts/norwester.ttf') format('truetype'),
+        url('../fonts/norwester/norwester-v1.2/webfonts/norwester.svg') format('svg');
+}
+
+//
+// Fonts from Google Fonts
+//
+
+// Roboto Slab
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);

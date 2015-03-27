@@ -1,0 +1,16 @@
+body{
+  background: $G-body-bg;
+  color: #151515;
+  font-size: u(1.6rem);
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 4px;
+  &-track {
+    background: #5a5a5a;
+  }
+  &-thumb {
+    background: $G-main-color;
+  }
+}

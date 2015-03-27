@@ -1,0 +1,16 @@
+// config
+$px-only: true;
+
+// imports fonts
+@import "modules/fonts";
+
+// imports global rules
+@import "modules/_global";
+
+// imports functions & mixins
+@import "modules/rem";
+@import "modules/vendor-prefix";
+@import "modules/anchor";
+
+// imports all components
+@import "components/all";
