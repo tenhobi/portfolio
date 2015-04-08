@@ -1,5 +1,7 @@
 # Created by https://www.gitignore.io
 
+node_modules/
+
 ### PhpStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
 
@@ -68,3 +70,4 @@ pubspec.lock
 ### Sass ###
 .sass-cache
 *.css.map
+.idea/workspace.xml
