@@ -1,5 +1,6 @@
 # Created by https://www.gitignore.io
 
+css/
 node_modules/
 
 ### PhpStorm ###
