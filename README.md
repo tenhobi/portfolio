@@ -1,4 +1,4 @@
-(Honza Bittner's portfolio)[http://honzabittner.cz]
+[Honza Bittner's portfolio](http://honzabittner.cz)
 =========================
 
 [![Build Status](https://travis-ci.org/hobi/hobi.github.io.svg)](https://travis-ci.org/hobi/hobi.github.io)
