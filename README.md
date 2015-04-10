@@ -1,5 +1,7 @@
-Honza Bittner's portfolio
+(Honza Bittner's portfolio)[http://honzabittner.cz]
 =========================
+
+[![Build Status](https://travis-ci.org/hobi/hobi.github.io.svg)](https://travis-ci.org/hobi/hobi.github.io)
 
 *"The strongest weapon is just a simple thought"*
 
