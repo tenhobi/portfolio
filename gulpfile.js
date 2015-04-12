@@ -3,6 +3,14 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename');
 
+var Options = function(){
+    this.sass = {
+      files: 'src/sass/**/*.scss',
+      dir: 'src/css/'
+    };
+};
+var opt = new Options();
+
 // Files to read.
 var paths = {
     sass: 'src/sass/**/*.scss'
