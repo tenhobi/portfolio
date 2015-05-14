@@ -1,6 +1,6 @@
 #[Honza Bittner's portfolio](http://hobi.github.io)
 
-[![Build Status](https://travis-ci.org/hobi/hobi.github.io.svg)](https://travis-ci.org/hobi/hobi.github.io)
+[![Build Status](https://travis-ci.org/HoBi/hobi.github.io.svg)](https://travis-ci.org/HoBi/hobi.github.io)
 
 *****
 
