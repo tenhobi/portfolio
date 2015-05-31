@@ -4,7 +4,7 @@
 
 *****
 
-New portfolio in progress... :)
+New portfolio in progress... :) I am going to finish it to 30.6. ! 
 
 *****
 
