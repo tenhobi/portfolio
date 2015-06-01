@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename'),
-    notify = require("gulp-notify"),
+    notify = require('gulp-notify'),
     sourcemaps = require('gulp-sourcemaps');
 
 var source = './src/';
