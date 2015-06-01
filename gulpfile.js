@@ -1,39 +1,43 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    rename = require('gulp-rename');
+    rename = require('gulp-rename'),
+    notify = require("gulp-notify"),
+    sourcemaps = require('gulp-sourcemaps');
 
-var Options = function(){
-    this.sass = {
-      files: 'src/sass/**/*.scss',
-      dir: 'src/css/'
-    };
-};
-var opt = new Options();
+var source = './src/';
 
-// Files to read.
-var paths = {
-    sass: 'src/sass/**/*.scss'
+var input = {
+    sass: source + 'sass/**/*.scss'
 };
 
-// Folders for export.
-var dirs = {
-    css: 'src/css/'
+var output = {
+    sass: source + './css/',
+    maps: 'maps/'
 };
 
-// Compile Sass, autoprefix properties, generate CSS.
+// Generate CSS from Sass.
 gulp.task('sass', function () {
-    return gulp.src(paths.sass)
-        .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(autoprefixer())
-        .pipe(rename('style.css'))
-        .pipe(gulp.dest(dirs.css));
+    return gulp.src(input.sass)
+        .pipe(sourcemaps.init())
+            .pipe(sass({outputStyle: 'expanded'}))
+                .on('error', notify.onError({
+                    title: "Error: Compile Sass",
+                    message: "<%= error.message %>"
+                }))
+            .pipe(autoprefixer())
+            .pipe(rename('style.css'))
+        .pipe(sourcemaps.write(output.maps))
+        .pipe(gulp.dest(output.sass));
 });
 
-// Watch ['Sass'] change in files and run it at begin.
-gulp.task('watch', ['sass'], function () {
-    gulp.watch('./sass/**/*.scss', ['sass']);
+// Task for run watch on 'sass' task.
+gulp.task('watch:sass', ['sass'], function () {
+    gulp.watch(input.sass, ['sass']);
 });
 
-// On default call watch.
-gulp.task('default', ['sass']);
+// Task to run in Travis CI.
+gulp.task('travis', ['sass']);
+
+// Default task.
+gulp.task('default');
