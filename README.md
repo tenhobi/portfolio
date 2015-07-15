@@ -4,7 +4,7 @@
 
 *****
 
-New portfolio in progress... :) **I am going to finish it to 30.6. !**
+New portfolio in progress... :) **This project (my personal portfolio) is temporarily paused.**
 
 *****
 
