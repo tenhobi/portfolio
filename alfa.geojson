@@ -2,9 +2,9 @@
   "type": "Feature",
   "geometry": {
     "type": "Point",
-    "coordinates": [125.6, 10.1]
+    "coordinates": [50.693536, 14.529836]
   },
   "properties": {
-    "name": "Dinagat Islands"
+    "name": "Honza Bittner"
   }
 }
