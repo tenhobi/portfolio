@@ -1,9 +1,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    rename = require('gulp-rename'),
-    notify = require('gulp-notify'),
-    sourcemaps = require('gulp-sourcemaps');
+    rename = require('gulp-rename');
 
 var source = './src/';
 
@@ -19,15 +17,9 @@ var output = {
 // Generate CSS from Sass.
 gulp.task('sass', function () {
     return gulp.src(input.sass)
-        .pipe(sourcemaps.init())
             .pipe(sass({outputStyle: 'expanded'}))
-                .on('error', notify.onError({
-                    title: "Error: Compile Sass",
-                    message: "<%= error.message %>"
-                }))
             .pipe(autoprefixer())
             .pipe(rename('style.css'))
-        .pipe(sourcemaps.write(output.maps))
         .pipe(gulp.dest(output.sass));
 });
 

@@ -1,5 +1,5 @@
 Options -Indexes
-Options +FollowSymLinks
+#Options +FollowSymLinks
 
 RewriteEngine On
 # RewriteBase /
