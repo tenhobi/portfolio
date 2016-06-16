@@ -21,7 +21,7 @@ body:after {
   content: '';
   display: block;
   width: 100%;
-  height: 15px;
+  height: 12px;
   background: linear-gradient(to right, #fff800, #fb0606, #fb006c, #fb0606, #fff800);
   position: fixed;
   z-index: -1;
