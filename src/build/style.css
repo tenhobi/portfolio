@@ -40,6 +40,9 @@ body:after {
   font-family: 'Bungee', cursive;
   text-transform: uppercase;
   line-height: 1em;
+  background: #fb0606;
+  color: #fff;
+  padding: 15px 20px;
 }
 
 @media (min-width: 400px) {
@@ -53,12 +56,11 @@ body:after {
   font-size: 30px;
   text-decoration: none;
   font-family: Verdana, Geneva, sans-serif;
-  opacity: 0.5;
-  transition: all 0.3s ease-in-out;
   outline: none;
+  color: #000;
 }
 
 .holder a:hover,
 .holder a:focus {
-  opacity: 1;
+  color: #fb0606;
 }
