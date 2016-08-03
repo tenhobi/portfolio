@@ -4,4 +4,4 @@
 
 Ask me anything on [HoBi/ama](https://github.com/HoBi/ama)!
 
-Follow me on [Twitter](https://twitter.com/honzabittner).
+Follow me on [Twitter](https://twitter.com/tenhobi).
