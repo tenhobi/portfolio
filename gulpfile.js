@@ -3,29 +3,24 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     rename = require('gulp-rename');
 
-var source = './src/';
-
-var input = {
-    sass: source + 'sass/**/*.scss'
-};
-
-var output = {
-    sass: source + './css/',
-    maps: 'maps/'
+var config = {
+    scripts: ['./assets/scripts/**/*.js'],
+    styles: ['./assets/styles/**/*.scss'],
+    output: './build'
 };
 
 // Generate CSS from Sass.
 gulp.task('sass', function () {
-    return gulp.src(input.sass)
+    return gulp.src(config.styles)
             .pipe(sass({outputStyle: 'expanded'}))
             .pipe(autoprefixer())
             .pipe(rename('style.css'))
-        .pipe(gulp.dest(output.sass));
+        .pipe(gulp.dest(config.output));
 });
 
 // Task for run watch on 'sass' task.
 gulp.task('watch:sass', ['sass'], function () {
-    gulp.watch(input.sass, ['sass']);
+    gulp.watch(config.styles, ['sass']);
 });
 
 // Task to run in Travis CI.
