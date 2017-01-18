@@ -1,12 +1,12 @@
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    autoprefixer = require('gulp-autoprefixer'),
-    rename = require('gulp-rename');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var autoprefixer = require('gulp-autoprefixer');
+var rename = require('gulp-rename');
 
 var config = {
-    scripts: ['./assets/scripts/**/*.js'],
-    styles: ['./assets/styles/**/*.scss'],
-    output: './build'
+    scripts: ['./src/assets/scripts/**/*.js'],
+    styles: ['./src/assets/styles/**/*.scss'],
+    output: './src/build'
 };
 
 // Generate CSS from Sass.
