@@ -27,4 +27,4 @@ gulp.task('watch:sass', ['sass'], function () {
 gulp.task('travis', ['sass']);
 
 // Default task.
-gulp.task('default');
+gulp.task('default', ['sass']);
