@@ -8,8 +8,11 @@ body {
 
 body {
   background-color: #252525;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
 div,
@@ -28,14 +31,26 @@ span {
 /* portfolio */
 
 .wrapper {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
   height: 100%;
   width: 100%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 20px 0;
 }
@@ -99,11 +114,18 @@ span {
   grid-column: span 3;
 
   padding: 20px;
-  font-weight: 400;
-  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background: #181818;
   color: #ccc;
@@ -111,14 +133,44 @@ span {
   line-height: 1.4em;
 }
 
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0 97%
+  }
+  50% {
+    background-position: 100% 4%
+  }
+  100% {
+    background-position: 0 97%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0 97%
+  }
+  50% {
+    background-position: 100% 4%
+  }
+  100% {
+    background-position: 0 97%
+  }
+}
+
 .item--name {
   grid-row: span 1;
   grid-column: span 1;
 
-  background-color: #0065BD;
+  background: -webkit-linear-gradient(45deg, #0065bd, #00cca4, #e1ae14, #00cca4, #0065bd);
+  background: -o-linear-gradient(45deg, #0065bd, #00cca4, #e1ae14, #00cca4, #0065bd);
+  background: linear-gradient(45deg, #0065bd, #00cca4, #e1ae14, #00cca4, #0065bd);
+  background-size: 1500% 1500%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+
   color: #ddd;
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .item--introduction {
@@ -142,7 +194,7 @@ span {
   grid-row: 5 / span 2;
   grid-column: 1 / span 3;
   background-size: contain;
-  background-image: url('code_motto.png');
+  background-image: url('motto.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-color: #2b2b2b;
