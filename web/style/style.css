@@ -89,6 +89,9 @@ body * {
   font-size: 2rem;
   color: #ee2560;
   font-weight: 600;
+  background: -webkit-linear-gradient(left, #ee2560, #ffd400);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .link {
