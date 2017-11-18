@@ -116,6 +116,7 @@ body * {
 .paragraph {
   line-height: 1.6em;
   margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
 
 /* TALK */
