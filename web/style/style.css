@@ -55,9 +55,12 @@ body {
   height: 100%;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Encode Sans', sans-serif;
-  font-size: 21px;
   display: inline-block;
   font-weight: 400;
 }
@@ -105,7 +108,9 @@ body * {
   color: #888;
 }
 
-.content {}
+.twitter {
+  font-size: 1.2rem;
+}
 
 .heading {
   font-size: 1.4rem;
@@ -127,7 +132,6 @@ body * {
   justify-content: space-between;
   align-items: center;
   margin: 1.5rem 0;
-  font-size: 1.33rem;
 }
 
 .talk__primary {
@@ -148,7 +152,6 @@ body * {
 }
 
 .talk__event {
-  font-size: 1rem;
   color: #444;
   margin-top: 0.3rem;
 }
@@ -157,10 +160,67 @@ body * {
   color: #888;
   font-weight: 200;
   margin-top: 0.3rem;
+  font-size: 1.2rem;
 }
 
 .talk__date {
   font-weight: 200;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+
+/* ARTICLE */
+
+.article {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+}
+
+.article__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article__primary {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.article__secondary {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.article__name {
+  font-size: 1.7rem;
+  color: #444;
+}
+
+.article__name--todo {
+  color: #ccc;
+}
+
+.article__language {
+  color: #888;
+  font-weight: 200;
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+}
+
+.article__date {
+  font-weight: 200;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.article__description {
+  margin-top: 0.3rem;
   color: #888;
 }
 
