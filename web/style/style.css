@@ -97,8 +97,8 @@ body * {
 .link {
   color: #444;
   text-decoration: none;
-  border-bottom: 0.1rem dotted #ccc;
-  padding-bottom: 1px;
+  border-bottom: 0.1rem dotted #ddd;
+  padding-bottom: 0.2rem;
 }
 
 .link:hover {
@@ -125,26 +125,37 @@ body * {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 0;
+  margin: 1.5rem 0;
   font-size: 1.33rem;
 }
 
-.talk__left {
+.talk__primary {
   display: inline-flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.talk__secondary {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .talk__name {
   font-size: 1.7rem;
   color: #444;
-  text-decoration: none;
+}
+
+.talk__event {
+  font-size: 1rem;
+  color: #444;
+  margin-top: 0.3rem;
 }
 
 .talk__language {
   color: #888;
   font-weight: 200;
-  margin-left: 0.7rem;
+  margin-top: 0.3rem;
 }
 
 .talk__date {
