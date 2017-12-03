@@ -126,124 +126,62 @@ body * {
 
 /* TALK */
 
-.talk {
+.record__event {
+  color: #444;
+  margin-top: 0.3rem;
+}
+
+
+/* RECORD */
+
+.record {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   margin: 1.5rem 0;
 }
 
-.talk__primary {
+.record__primary {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.talk__secondary {
+.record__secondary {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-.talk__name {
-  font-size: 1.7rem;
-  color: #444;
-}
-
-.talk__event {
-  color: #444;
-  margin-top: 0.3rem;
-}
-
-.talk__language {
-  color: #888;
-  font-weight: 200;
-  margin-top: 0.3rem;
-  font-size: 1.2rem;
-}
-
-.talk__date {
-  font-weight: 200;
-  color: #888;
-  font-size: 1.2rem;
-}
-
-
-/* ARTICLE */
-
-.article {
-  display: flex;
-  flex-direction: column;
-  margin: 1.5rem 0;
-}
-
-.article__header {
+.record__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.article__primary {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.article__secondary {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.article__name {
+.record__title {
   font-size: 1.7rem;
   color: #444;
 }
 
-.article__name--todo {
+.record__title--todo {
   color: #ccc;
 }
 
-.article__language {
+.record__language {
   color: #888;
   font-weight: 200;
   margin-top: 0.3rem;
   font-size: 1.2rem;
 }
 
-.article__date {
+.record__date {
   font-weight: 200;
   color: #888;
   font-size: 1.2rem;
 }
 
-.article__description {
+.record__description {
   margin-top: 0.3rem;
   color: #888;
-}
-
-/* PROJECT */
-
-.project {
-  display: block;
-  padding: 0.75rem 0;
-  font-size: 1.33rem;
-}
-
-.project:not(:last-of-type) {
-  margin-bottom: 1.5rem;
-}
-
-.project__name {
-  font-size: 1.7rem;
-  color: #444;
-  text-decoration: none;
-  margin-bottom: 1rem;
-  display: inline-block;
-}
-
-.project__description {
-
 }

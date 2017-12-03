@@ -9,6 +9,7 @@ environment:
 
 dependencies:
   intl: '^0.15.2'
+  firebase: '^4.1.0'
 
 dev_dependencies:
   browser: '>=0.10.0 <0.11.0'
