@@ -1,0 +1,8 @@
+language: dart
+
+dart:
+- stable
+- dev
+
+dart_task:
+- dartanalyzer: --fatal-warnings lib web
