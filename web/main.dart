@@ -27,7 +27,7 @@ Future initRecords(fb.DatabaseReference ref, String selector) async {
 
   fb.QueryEvent qe = await ref.once('value');
 
-  (qe?.snapshot?.val() as Map)?.forEach((String key, Map value) {
+  (qe?.snapshot?.val() as Map<String, Map>)?.forEach((String key, Map value) {
     try {
       entities.add(new RecordEntity.fromMap(value));
     } catch(e) {}
