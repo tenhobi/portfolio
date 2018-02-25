@@ -6,3 +6,4 @@ dart:
 
 dart_task:
 - dartanalyzer: --fatal-warnings lib web
+- dartfmt

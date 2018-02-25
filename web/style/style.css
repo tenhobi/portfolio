@@ -110,7 +110,7 @@ body * {
 
 .link:hover {
   background: #ffd400;
-  color: #131a20;
+  color: #463d00;
 }
 
 .twitter {
@@ -155,6 +155,11 @@ body * {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-end;
+  opacity: 0;
+}
+
+.record:hover .record__secondary {
+  opacity: 1;
 }
 
 .record__header {

@@ -18,11 +18,9 @@ class RecordEntity {
     this.subtitleLink,
     this.description,
     this.date,
-    this.language = 'cz',
+    this.language,
   }) {
     if (title == null) throw new ArgumentError.notNull('title');
-    if (date == null) throw new ArgumentError.notNull('date');
-
   }
 
   RecordEntity.fromMap(Map map)
@@ -40,18 +38,27 @@ class RecordEntity {
   String toString() {
     String titleElement = '', subtitleElement = '', descriptionElement = '';
 
-    bool planned = date.isAfter(new DateTime.now());
+    bool planned = date?.isAfter(new DateTime.now()) ?? false;
 
     // link or simple text
     if (titleLink != null) {
-      titleElement = '<a class="record__title link" href="${titleLink}" target="_blank">${title ?? ''}</a>';
+      titleElement =
+          '''<a class="record__title link" href="${titleLink}" target="_blank">
+            ${title ?? ''}</a>
+          ''';
     } else {
-      titleElement = '<span class="record__title ${planned ? 'record__title--todo' : ''}">${title ?? ''}</span>';
+      titleElement =
+          '''<span class="record__title ${planned ? 'record__title--todo' : ''}">
+            ${title ?? ''}
+          </span>''';
     }
 
     // link or simple text
     if (subtitle != null) {
-      subtitleElement = '<a class="record__event link" href="${subtitleLink}" target="_blank">${subtitle ?? ''}</a>';
+      subtitleElement =
+          '''<a class="record__event link" href="${subtitleLink}" target="_blank">
+            ${subtitle ?? ''}
+           </a>''';
     } else {
       subtitleElement = '<span class="record__event">${subtitle ?? ''}</span>';
     }
@@ -69,7 +76,9 @@ class RecordEntity {
             ${subtitleElement}
           </div>
           <div class="record__secondary">
-            <div class="record__date">${date != null ? _formatter.format(date) : ''}</div>
+            <div class="record__date">
+              ${date != null ? _formatter.format(date) : ''}
+            </div>
             <span class="record__language">${language ?? ''}</span>
           </div>
         </div>
