@@ -1,3 +1,4 @@
+import 'package:meta/meta.dart';
 import 'package:intl/intl.dart';
 
 class RecordEntity {
@@ -12,18 +13,14 @@ class RecordEntity {
   final DateFormat _formatter = new DateFormat('d. M. yyyy');
 
   RecordEntity({
-    this.title,
+    @required this.title,
     this.titleLink,
     this.subtitle,
     this.subtitleLink,
     this.description,
     this.date,
-    this.language = 'cz',
-  }) {
-    if (title == null) throw new ArgumentError.notNull('title');
-    if (date == null) throw new ArgumentError.notNull('date');
-
-  }
+    this.language,
+  });
 
   RecordEntity.fromMap(Map map)
       : this(
@@ -40,18 +37,27 @@ class RecordEntity {
   String toString() {
     String titleElement = '', subtitleElement = '', descriptionElement = '';
 
-    bool planned = date.isAfter(new DateTime.now());
+    bool planned = date?.isAfter(new DateTime.now()) ?? false;
 
     // link or simple text
     if (titleLink != null) {
-      titleElement = '<a class="record__title link" href="${titleLink}" target="_blank">${title ?? ''}</a>';
+      titleElement =
+          '''<a class="record__title link" href="${titleLink}" target="_blank">
+            ${title ?? ''}</a>
+          ''';
     } else {
-      titleElement = '<span class="record__title ${planned ? 'record__title--todo' : ''}">${title ?? ''}</span>';
+      titleElement =
+          '''<span class="record__title ${planned ? 'record__title--todo' : ''}">
+            ${title ?? ''}
+          </span>''';
     }
 
     // link or simple text
     if (subtitle != null) {
-      subtitleElement = '<a class="record__event link" href="${subtitleLink}" target="_blank">${subtitle ?? ''}</a>';
+      subtitleElement =
+          '''<a class="record__event link" href="${subtitleLink}" target="_blank">
+            ${subtitle ?? ''}
+           </a>''';
     } else {
       subtitleElement = '<span class="record__event">${subtitle ?? ''}</span>';
     }
@@ -63,17 +69,17 @@ class RecordEntity {
 
     return '''
       <div class="record">
-        <div class="record__header">
-          <div class="record__primary">
-            ${titleElement}
-            ${subtitleElement}
-          </div>
-          <div class="record__secondary">
-            <div class="record__date">${date != null ? _formatter.format(date) : ''}</div>
-            <span class="record__language">${language ?? ''}</span>
-          </div>
+        <div class="record__left">
+          ${titleElement}
+          ${subtitleElement}
+          ${descriptionElement}
         </div>
-        ${descriptionElement}
+        <div class="record__right">
+          <div class="record__date">
+              ${date != null ? _formatter.format(date) : ''}
+            </div>
+            <span class="record__language">${language ?? ''}</span>
+        </div>
       </div>
     ''';
   }
