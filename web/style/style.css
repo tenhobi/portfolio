@@ -138,9 +138,11 @@ body * {
   text-decoration: none;
 }
 
-.link:hover {
-  background: var(--color-primary);
-  color: var(--color-text-on-primary);
+@media all and (min-width: 480px) {
+  .link:hover {
+    background: var(--color-primary);
+    color: var(--color-text-on-primary);
+  }
 }
 
 .twitter {
@@ -164,6 +166,11 @@ body * {
 .record__event {
   color: var(--color-text);
   margin-top: 0.3rem;
+}
+
+.record__event.link {
+  margin-left: -0.3rem;
+  margin-right: -0.3rem;
 }
 
 /* RECORD */
@@ -222,6 +229,11 @@ body * {
   color: var(--color-text);
 }
 
+.record__title.link {
+  margin-left: -0.3rem;
+  margin-right: -0.3rem;
+}
+
 .record__title--todo {
   color: var(--color-text);
 }
@@ -245,4 +257,5 @@ body * {
   color: var(--color-text);
   opacity: 0.5;
   font-weight: 300;
+  line-height: 1.2em;
 }

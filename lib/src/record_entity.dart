@@ -37,27 +37,20 @@ class RecordEntity {
   String toString() {
     String titleElement = '', subtitleElement = '', descriptionElement = '';
 
-    bool planned = date?.isAfter(new DateTime.now()) ?? false;
+    final bool planned = date?.isAfter(new DateTime.now()) ?? false;
 
     // link or simple text
     if (titleLink != null) {
-      titleElement =
-          '''<a class="record__title link" href="${titleLink}" target="_blank">
-            ${title ?? ''}</a>
+      titleElement = '''<a class="record__title link" href="${titleLink}" target="_blank">${title ?? ''}</a>
           ''';
     } else {
-      titleElement =
-          '''<span class="record__title ${planned ? 'record__title--todo' : ''}">
-            ${title ?? ''}
-          </span>''';
+      titleElement = '''<span class="record__title ${planned ? 'record__title--todo' : ''}">${title ?? ''}</span>''';
     }
 
     // link or simple text
     if (subtitle != null) {
       subtitleElement =
-          '''<a class="record__event link" href="${subtitleLink}" target="_blank">
-            ${subtitle ?? ''}
-           </a>''';
+          '''<a class="record__event link" href="${subtitleLink}" target="_blank">${subtitle ?? ''}</a>''';
     } else {
       subtitleElement = '<span class="record__event">${subtitle ?? ''}</span>';
     }

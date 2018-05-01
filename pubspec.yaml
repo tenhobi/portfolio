@@ -5,15 +5,12 @@ author: Honza Bittner
 homepage: http://honzabittner.cz
 
 environment:
-  sdk: '>=1.0.0 <2.0.0'
+  sdk: '>=2.0.0-dev.46.0 <2.0.0'
 
 dependencies:
   intl: '^0.15.2'
   meta: '^1.1.2'
 
 dev_dependencies:
-  browser: '^0.10.0+2'
-  dart_to_js_script_rewriter: '^1.0.3'
-
-transformers:
-- dart_to_js_script_rewriter
+  build_runner: '^0.8.7'
+  build_web_compilers: '^0.3.7+3'

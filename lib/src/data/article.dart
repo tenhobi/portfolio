@@ -8,16 +8,14 @@ List<RecordEntity> articles = [
     titleLink: 'https://www.itnetwork.cz/dart/oop',
     language: czech,
     date: new DateTime(2018, 2, 11),
-    description:
-        'A series of articles about the object oriented programming in Dart.',
+    description: 'A series of articles about the object oriented programming in Dart.',
   ),
   new RecordEntity(
     title: 'Základní konstrukce jazyka Dart',
     titleLink: 'https://www.itnetwork.cz/dart/zaklady',
     language: czech,
     date: new DateTime(2018, 1, 5),
-    description:
-        'A series of articles about the basics of the programming language Dart.',
+    description: 'A series of articles about the basics of the programming language Dart.',
   ),
   new RecordEntity(
     title: 'Hotová řešení v JavaScriptu',
@@ -31,8 +29,7 @@ List<RecordEntity> articles = [
     titleLink: 'https://www.itnetwork.cz/html-css/webove-aplikace',
     language: czech,
     date: new DateTime(2015, 5, 29),
-    description:
-        'A series of articles as a web export of my highschool semi-thesis about web technologies.',
+    description: 'A series of articles as a web export of my highschool semi-thesis about web technologies.',
   ),
   new RecordEntity(
     title: 'Responzivní webdesign',
