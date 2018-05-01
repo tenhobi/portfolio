@@ -1,9 +1,15 @@
 language: dart
 
 dart:
-- stable
-- dev
+  - dev
 
-dart_task:
-- dartanalyzer: --fatal-warnings lib web
-- dartfmt
+before_script:
+  - pub get
+
+script:
+  - dartanalyzer lib web --fatal-warnings
+  - dartfmt --dry-run --line-length 120 --set-exit-if-changed .
+
+cache:
+  directories:
+    - $HOME/.pub-cache
