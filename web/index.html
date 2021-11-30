@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honza Bittner</title>
 
-    <!-- CSS -->
-    <link href="style/style.css" rel="stylesheet" />
-
-    <!-- Fonts -->
+    <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css?family=Encode+Sans:200,400,600&amp;subset=latin-ext" rel="stylesheet">
-
-    <!-- Dart -->
-    <script defer src="main.dart.js" type="application/javascript"></script>
+    <script defer src="main.dart.js"></script>
 
     <!-- Meta tags -->
     <meta name="robots" content="index, follow">
     <meta name="author" content="Honza Bittner">
     <meta name="description" content="Proactive programmer from Czechia who makes a code poetry." />
-    <meta name="keywords" content="Dart,HTML,CSS,Website,Portfolio">
+    <meta name="keywords" content="Dart,Flutter,HTML,CSS,Website,Portfolio">
 
     <!-- Social networks -->
     <meta itemprop="name" content="Honza Bittner's website">
@@ -36,17 +31,17 @@
 </head>
 <body>
 
-<div class="container">
-    <div class="nav">
-        <h1 class="logotype">Honza Bittner</h1>
-        <a class="link twitter" href="https://twitter.com/tenhobi" target="_blank">@tenhobi</a>
-    </div>
+<div class="nav">
+    <h1 class="logotype">Bittner</h1>
+    <a class="nav__link" href="https://twitter.com/tenhobi" target="_blank">@tenhobi</a>
+</div>
 
+<div class="container">
     <div class="content">
         <div class="section">
             <p class="paragraph">I have been studying <a class="link" href="http://fit.cvut.cz/en">the Faculty of Information Technology, CTU</a> and I am a member of faculty club FIT++.</p>
             <p class="paragraph">In my free time I cook, read books and I am trying to be active in sport. I also like exploring of open-source repositories on GitHub and making my own.</p>
-            <p class="paragraph"><a class="link" href="https://github.com/tenhobi/ama" target="_blank">Ask me anything!</a></p>
+            <p class="paragraph"><a class="block-link" href="https://github.com/tenhobi/ama" target="_blank">Ask me anything!</a></p>
         </div>
 
         <div class="section">
@@ -63,18 +58,7 @@
             <h2 class="heading">Projects</h2>
             <div id="projects"></div>
         </div>
-    </div>
+      </div>
 </div>
-
-<!-- Google Analytics -->
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-68127923-1', 'auto');
-    ga('send', 'pageview');
-</script>
 </body>
 </html>

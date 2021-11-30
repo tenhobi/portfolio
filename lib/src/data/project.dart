@@ -1,7 +1,7 @@
-import 'package:fckng_portfolio/src/record_entity.dart';
+import 'package:portfolio/src/record_entity.dart';
 
 List<RecordEntity> projects = [
-  new RecordEntity(
+  RecordEntity(
     title: 'Flashcards',
     titleLink: 'https://github.com/tenhobi/flashcards',
     description:
